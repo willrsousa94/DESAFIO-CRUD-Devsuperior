@@ -1,6 +1,8 @@
 package com.willrsousa.crudchallenge.dto;
 
 
+import com.willrsousa.crudchallenge.entities.Client;
+
 import java.time.LocalDate;
 
 public class ClientDTO {
@@ -21,6 +23,15 @@ public class ClientDTO {
         this.income = income;
         this.birthDate = birthDate;
         this.children = children;
+    }
+
+    public ClientDTO(Client entity){
+        id = entity.getId();
+        name = entity.getName();
+        cpf = entity.getCpf();
+        income = entity.getIncome();
+        birthDate = entity.getBirthDate();
+        children = entity.getChildren();
     }
 
     public Long getId() {
